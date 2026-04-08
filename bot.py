@@ -1,13 +1,11 @@
 import time
 import requests
 
-# 10 forex pairs
 pairs = [
     "EURUSD","GBPUSD","USDJPY","AUDUSD","USDCAD",
         "USDCHF","NZDUSD","EURGBP","EURJPY","GBPJPY"
         ]
 
-        # get price from API
         def get_price(symbol):
             try:
                     url = f"https://api.twelvedata.com/price?symbol={symbol}&apikey=demo"
@@ -19,15 +17,14 @@ pairs = [
 
                                                         print("BOT STARTED")
 
-                                                        # main loop
                                                         while True:
                                                             for pair in pairs:
                                                                     price = get_price(pair)
-                                                                            
-                                                                                    if price:
-                                                                                                print(pair + ": " + str(price))
-                                                                                                        else:
-                                                                                                                    print(pair + ": Error")
-                                                                                                                        
-                                                                                                                            print("------")
-                                                                                                                                time.sleep(10)final clean working bot
+
+                                                                            if price:
+                                                                                        print(pair + ": " + str(price))
+                                                                                                else:
+                                                                                                            print(pair + ": Error")
+
+                                                                                                                print("------")
+                                                                                                                    time.sleep(10)
