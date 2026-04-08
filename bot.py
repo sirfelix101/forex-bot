@@ -6,7 +6,7 @@ pairs = [
         "USDCHF", "NZDUSD", "EURGBP", "EURJPY", "GBPJPY"
         ]
 
-        def get_price(symbol):
+def get_price(symbol):
             try:
                     base = symbol[:3]
                             quote = symbol[3:]
