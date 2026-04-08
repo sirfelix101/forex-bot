@@ -20,5 +20,5 @@ while True:
       except:
                     print(pair + " | Error")
 
-    print("------")
-    time.sleep(10)
+print("------")
+time.sleep(10)
